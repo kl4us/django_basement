@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sd-4 col-sd-offset-2 col-xs-4 col-xs-offset-2">
+            <h4>Sign in with your existing Accounts</h4>
+            <hr />
+            <a href="{% url 'socialauth_begin' 'google-oauth2' %}?next={{ next }}">
+                <img src="{% static "img/authbuttons/png/google_64.png" %}" alt="Login with Google" />
+            </a>
+            <a href="{% url 'socialauth_begin' 'facebook' %}?next={{ next }}">
+                <img src="{% static "img/authbuttons/png/facebook_64.png" %}" alt="Login with Facebook" />
+            </a>
+            <a href="{% url 'socialauth_begin' 'twitter' %}?next={{ next }}">
+                <img src="{% static "img/authbuttons/png/twitter_64.png" %}" alt="Login with Twitter" />
+            </a>
+        </div>              
+        <div class="col-lg-4 col-md-4 col-sd-4 col-xs-4">
+            <h4>Sign in with our Account</h4>
+            <hr />          
+            <form method="post" action=".">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="hidden" name="next" value="{{next}}">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br />
+            <p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+            <p>{% trans "Not member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>            
+        </div>
+    </div>
+</div>
+{% endblock %}

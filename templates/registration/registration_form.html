@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sd-4 col-sd-offset-4 col-xs-4 col-xs-offset-4">
+            <legend><i class="glyphicon glyphicon-globe"></i> Sign up!</legend>
+            
+            <form method="post" action=".">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <!-- div class="form-actions" -->
+                    <input type="submit" class="btn btn-primary" value="{% trans 'Submit' %}" />
+                <!-- /div -->
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
