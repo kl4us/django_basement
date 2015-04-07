@@ -14,7 +14,7 @@ Example usage
     $ virtualenv mysite-env --no-site-packages
     $ source mysite-env/bin/activate
     (mysite-env)$ pip install django==1.8
-    (mysite-env)$ django-admin.py startproject --template=https://github.com/kl4us/django-basement/zipball/master mysite
+    (mysite-env)$ django-admin.py startproject --template=https://github.com/kl4us/django_basement/zipball/master mysite
     (mysite-env)$ cd mysite
     (mysite-env)$ pip install -r requirements.txt
     (mysite-env)$ python manage.py migrate
