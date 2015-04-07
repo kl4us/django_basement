@@ -1,8 +1,8 @@
 This is a django 1.8 project with basic functionality like:
 
-registration
-social authentication
-debug toolbar
+ * registration
+ * social authentication
+ * debug toolbar
 
 
 I use this as starter project for my sites. 
@@ -61,13 +61,13 @@ For social authentication and debug toolbar you need to create a file named loca
 	        'INTERCEPT_REDIRECTS': False,
 	    }
 
-	    GOOGLE_OAUTH2_CLIENT_ID = '631907598060-crg2hrm2bebeahenvd33jiduqjnk1ahq.apps.googleusercontent.com'
-	    GOOGLE_OAUTH2_CLIENT_SECRET = '21vFbtAAKcUfTVsdayTN8497'
+	    GOOGLE_OAUTH2_CLIENT_ID = '<your id>'
+	    GOOGLE_OAUTH2_CLIENT_SECRET = '<your secret>'
 
-	    TWITTER_CONSUMER_KEY = 'p6YvrhQKTqzngXh5UzC32g'
-	    TWITTER_CONSUMER_SECRET = 'WXbecbfd1ZHt9cT2ozTEgp9XnhRVQyqFInDMZMOq4'
+	    TWITTER_CONSUMER_KEY = '<your id>'
+	    TWITTER_CONSUMER_SECRET = '<your secret>'
 	    
-	    FACEBOOK_APP_ID = '335961516540525'
-	    FACEBOOK_API_SECRET = '8e0370430248f3a6c1530faf1f72d4c0'     
+	    FACEBOOK_APP_ID = '<your id>'
+	    FACEBOOK_API_SECRET = '<your secret>'     
 
 Hit http://127.0.0.1:8000 to view the site!
